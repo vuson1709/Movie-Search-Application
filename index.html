@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles.css" rel="stylesheet" />
+    <title>Vu's IMDB</title>
+  </head>
+  <body>
+    <header>
+      <h1>Vu Son's Movie Database</h1>
+    </header>
+    <main>
+      <form action="" class="search-bar">
+        <input
+          type="text"
+          name="movie"
+          id="search-bar"
+          placeholder="Type movie title to search..."
+        />
+        <button class="btn-search" type="submit">Enter</button>
+      </form>
+
+      <section class="recently-release">
+        <h2>Recently Release</h2>
+        <div class="movie-list">
+          <article class="movie-info">
+            <img
+              src="./movie-avatar.jpeg"
+              alt="Interstella"
+              class="movie-image"
+            />
+            <div class="movie-data">
+              <h3 class="movie-title">Muzzle</h3>
+              <p class="movie-genre">Action, Crime, Drama, Thriller,...</p>
+              <p class="movie-overview">
+                Barbie and Ken are having the time of their lives in the
+                colorful and seemingly perfect world of Barbie Land. Howev...
+                See more
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
