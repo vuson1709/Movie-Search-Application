@@ -5,10 +5,13 @@
 
 html,
 body {
-  font-family: system-ui;
+  font-family: system-ui, sans-serif;
   font-size: 16px;
   color: black;
   background-color: #f7f7f7;
+
+  /* remove when finish project */
+  /* height: 3000px; */
 }
 
 h1 {
@@ -20,11 +23,12 @@ h1 {
 
 h2 {
   margin-bottom: 30px;
+  margin-left: 20px;
 }
 
 h3 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
@@ -36,6 +40,19 @@ p {
   display: none;
 }
 
+.btn {
+  margin-right: 10px;
+  border-radius: 40px;
+  border: 1px solid black;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #dbdada;
+}
+
 /* =============== 1. SEARCH BAR ============= */
 .search-bar {
   display: flex;
@@ -44,6 +61,7 @@ p {
   align-items: center;
   border: 1px solid black;
   border-radius: 40px;
+  background-color: #fff;
 }
 
 #search-bar {
@@ -56,24 +74,18 @@ p {
   padding-left: 20px;
 }
 
-.btn-search {
-  margin-right: 10px;
-  border-radius: 40px;
-  width: 100px;
-  height: 40px;
-  cursor: pointer;
-}
-
 /* =============== 2. RECENTLY RELEASE ============= */
 .recently-release {
   margin-top: 80px;
+  transition: all 1s;
 }
 
 /* =============== COMPONENT MOVIE INFO ============= */
 .movie-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 50px;
+  justify-content: center;
+
   gap: 50px;
 }
 .movie-info {
@@ -81,16 +93,19 @@ p {
   box-shadow: 0 1rem 2rem 1rem rgba(0, 0, 0, 0.1);
   width: 300px;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .movie-image {
   width: 300px;
+  height: 380px;
+  object-fit: cover;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
 }
 
 .movie-data {
-  padding: 10px 20px 15px 20px;
+  padding: 5px 15px 15px;
 }
 
 .movie-genre {
@@ -100,7 +115,126 @@ p {
 
 .movie-overview {
   font-size: 1.125rem;
-  word-spacing: 3px;
-  text-align: justify;
+  word-spacing: 2px;
   line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* =============== 3. SEARCH RESULT ============= */
+
+.search-result {
+  margin: 80px 0 50px;
+  opacity: 0;
+  position: relative;
+}
+
+.btn-sort {
+  position: absolute;
+  top: -40px;
+  right: 50px;
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: #fff;
+}
+
+.btn-filter {
+  position: absolute;
+  top: -40px;
+  right: 200px;
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: #fff;
+}
+
+.search-info {
+  margin: 0 50px 20px 50px;
+  display: flex;
+  cursor: pointer;
+
+  background-color: #fff;
+  box-shadow: 0 1rem 2rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.search-info img {
+  max-width: 100px;
+}
+
+.search.movie-data,
+.search.movie-data h3 {
+  text-align: left;
+}
+
+.search-title {
+  display: inline-block;
+}
+
+.release-year {
+  font-size: 1.5rem;
+  color: #6a6a6a;
+}
+
+.search .movie-genre {
+  text-align: left;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev,
+.next {
+  margin: 0;
+  width: 200px;
+  height: 50px;
+}
+
+/* =============== 4. MODAL ============= */
+.modal {
+  display: none;
+  padding: 50px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow: auto;
+}
+
+.close {
+  position: absolute;
+  right: 30px;
+  top: 5px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #6a6a6a;
+}
+
+.modal .movie-info {
+  width: 90%;
+  margin: 0 auto;
+  cursor: auto;
+  padding: 30px;
+  /* min-height: 100vh; */
+}
+
+.modal iframe {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 7px;
+}
+
+.modal .movie-release {
+  font-size: 1.2rem;
+  font-weight: normal;
 }

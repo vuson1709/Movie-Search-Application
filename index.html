@@ -18,29 +18,97 @@
           id="search-bar"
           placeholder="Type movie title to search..."
         />
-        <button class="btn-search" type="submit">Enter</button>
+        <button class="btn btn-search" type="submit">Enter</button>
       </form>
 
       <section class="recently-release">
         <h2>Recently Release</h2>
         <div class="movie-list">
-          <article class="movie-info">
+          <!-- <article class="movie-info">
             <img
               src="./movie-avatar.jpeg"
               alt="Interstella"
               class="movie-image"
             />
+
             <div class="movie-data">
               <h3 class="movie-title">Muzzle</h3>
               <p class="movie-genre">Action, Crime, Drama, Thriller,...</p>
               <p class="movie-overview">
-                Barbie and Ken are having the time of their lives in the
-                colorful and seemingly perfect world of Barbie Land. Howev...
-                See more
+                Grieving the loss of a best friend she couldn't protect, an
+                ex-bodyguard sets out to fulfi... See more
               </p>
             </div>
-          </article>
+          </article> -->
         </div>
+      </section>
+
+      <section class="search-result">
+        <select class="btn-filter" id="btn-filter" placeholder="a">
+          <option value="0" disabled selected>Filter by genre</option>
+          <option value="0">All</option>
+        </select>
+
+        <select class="btn-sort" id="btn-sort">
+          <option value="default">Sort by Default</option>
+          <option value="newest">Sort by Newest</option>
+          <option value="oldest">Sort by Oldest</option>
+        </select>
+
+        <div class="search-result-container">
+          <!-- <div class="search-info">
+            <img src="./Image_not_available2.jpeg" alt="abc" />
+            <div class="search movie-data">
+              <h3 class="search-title">Interstella</h3>
+              <span class="release-year">(2023)</span>
+              <p class="movie-genre">Action, Crime, Drama, Thriller,...</p>
+              <p>
+                Grieving the loss of a best friend she couldn't protect, an
+                ex-bodyguard sets out...Grieving the loss of a best friend she
+                couldn't protect, a See more
+              </p>
+            </div>
+          </div> -->
+        </div>
+        <div class="pagination">
+          <button class="btn prev">Previous</button>
+          <button class="btn next">Next</button>
+          <span class="page"></span>
+        </div>
+      </section>
+
+      <section class="modal">
+        <button class="close">&times;</button>
+        <!-- <article class="movie-info">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/HurjfO_TDlQ?si=eMZ9FJkv9KRGiO4i"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+
+          <div class="movie-data">
+            <h3 class="movie-title">
+              Muzzle
+              <span class="movie-release">(2022)</span>
+            </h3>
+
+            <p class="movie-genre">Action, Crime, Drama, Thriller,...</p>
+            <p class="movie-overview">
+              Ethan Hunt and his IMF team embark on their most dangerous mission
+              yet: To track down a terrifying new weapon that threatens all of
+              humanity before it falls into the wrong hands. With control of the
+              future and the world's fate at stake and dark forces from Ethan's
+              past closing in, a deadly race around the globe begins. Confronted
+              by a mysterious, all-powerful enemy, Ethan must consider that
+              nothing can matter more than his mission—not even the lives of
+              those he cares about most.
+            </p>
+          </div>
+        </article> -->
       </section>
     </main>
 
