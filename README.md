@@ -58,7 +58,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://son-moviedatabase.netlify.app/)
+- Live Site URL:(https://son-moviedatabase.netlify.app/)
 
 ## My process
 
